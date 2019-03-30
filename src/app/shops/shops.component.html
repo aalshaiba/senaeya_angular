@@ -1,0 +1,36 @@
+<div class="container">
+    <!--  <div class="input-group">-->
+    <!--    <input type="text" class="form-control" placeholder="Start searching ..." [(ngModel)]="query">-->
+    <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Start searching ... " [(ngModel)]="query">
+        <mat-icon matSuffix color="primary">search</mat-icon>
+    </mat-form-field>
+    <!--    <div class="input-group-append">-->
+    <!--      <span class="input-group-text bg-dark"><i class="fas fa-search text-light"></i></span>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <small class="text-muted">{{list.length}} {{list.length == 1 ? 'Result' : 'Results'}}</small>
+    <div *ngIf="list == null" class="d-flex justify-content-around mt-4">
+        <h4>Loading ... </h4>
+        <div class="spinner-border" role="status"></div>
+    </div>
+    <!--    <ul *ngFor="let shop of list" class="list-group list-group-flush">-->
+    <!--        <li class="list-group-item">-->
+    <!--            <a href="{{shop.google_maps_link}}" class="text-decoration-none"><h5-->
+    <!--                    class="mb-0 pb-0 text-dark">{{shop.name}}</h5></a>-->
+    <!--            <small class="text-info">Tel: {{shop.number}}</small>-->
+    <!--            <br>-->
+    <!--            <small class="text-muted"><a href="{{shop.google_maps_link}}"-->
+    <!--                                         class="text-decoration-none text-secondary">{{shop.address}}</a></small>-->
+    <!--        </li>-->
+    <mat-list>
+        <mat-list-item *ngFor="let shop of list">
+            <mat-icon matListIcon>search</mat-icon>
+            <h4 matLine>{{shop.name}}</h4>
+            <p matLine>{{shop.address}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+    <!--    </ul>-->
+</div>

@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/my_theme.scss"
             ],
             "scripts": []
           },
@@ -131,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "Senaeya"
+  "defaultProject": "senaeya"
 }
