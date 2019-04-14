@@ -1,6 +1,6 @@
 export interface Shop {
-  address: string;
-  number: number;
+  formatted_address: string;
+  formatted_phone_number: number;
   google_maps_link: string;
   rating: number;
   email: string;

@@ -21,12 +21,12 @@ export class SearchPipe implements PipeTransform {
     } else {
       shops.forEach((shop) => {
         if (shop.name.toLowerCase().includes(query.toLowerCase()) ||
-          shop.address.toLowerCase().includes(query.toLowerCase())) {
+          shop.formatted_address.toLowerCase().includes(query.toLowerCase())) {
           results.push(shop);
         }
       });
     }
-    this.api.length(results);
+    this.api.length(results.length);
 
     return results;
   }

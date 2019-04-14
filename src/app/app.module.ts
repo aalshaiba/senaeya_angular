@@ -11,7 +11,6 @@ import {SearchPipe} from './search.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
 
 const appRoutes: Routes = [
     {
@@ -38,15 +37,9 @@ const appRoutes: Routes = [
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
-        MatInputModule,
-        MatFormFieldModule,
-        MatIconModule,
-        MatListModule,
-        MatDividerModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes),
-        MatIconModule
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [{
         provide: LocationStrategy, useClass: HashLocationStrategy
