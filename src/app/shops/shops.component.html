@@ -12,12 +12,12 @@
     </div>
     <ul *ngFor="let shop of list | search:query" class="list-group list-group-flush">
         <li class="list-group-item">
-            <a href="{{shop.google_maps_link}}" class="text-decoration-none"><h5
+            <a href="{{shop.url}}" class="text-decoration-none"><h5
                     class="mb-0 pb-0 text-dark">{{shop.name}}</h5></a>
-            <small class="text-info">Tel: {{shop.formatted_phone_number}}</small>
+            <small class="text-info">Tel: {{shop.number}}</small>
             <br>
-            <small class="text-muted"><a href="{{shop.google_maps_link}}"
-                                         class="text-decoration-none text-secondary">{{shop.formatted_address}}</a>
+            <small class="text-muted"><a href="{{shop.url}}"
+                                         class="text-decoration-none text-secondary">{{shop.address}}</a>
             </small>
         </li>
 

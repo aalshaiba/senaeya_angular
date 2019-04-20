@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
-import {PrivacyComponent} from './privacy/privacy.component';
 import {ContactComponent} from './contact/contact.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ShopsComponent} from './shops/shops.component';
@@ -17,9 +16,6 @@ const appRoutes: Routes = [
         path: '', component: ShopsComponent
     },
     {
-        path: 'privacy', component: PrivacyComponent
-    },
-    {
         path: 'contact', component: ContactComponent
     }
 ];
@@ -28,7 +24,6 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         NavbarComponent,
-        PrivacyComponent,
         ContactComponent,
         ShopsComponent,
         SearchPipe

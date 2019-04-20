@@ -14,6 +14,20 @@ export class NavbarComponent implements OnInit {
 
   }
 
+  onButtonGroupClick($event) {
+    const clickedElement = $event.target;
+
+    if (clickedElement.nodeName === 'a') {
+
+      const isCertainButtonAlreadyActive = clickedElement.parentElement.querySelector('.active');
+      // if a Button already has Class: .active
+      if (isCertainButtonAlreadyActive) {
+        isCertainButtonAlreadyActive.classList.remove('active');
+      }
+
+      clickedElement.className += ' active';
+    }
+  }
 
 
 }

@@ -8,8 +8,8 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class ApiService {
 
-  url = 'assets/data/data.json';
-  // url = ' http://localhost:8000/my/';
+  // url = 'assets/data/data.json';
+  url = 'http://localhost:8000/api/shops/';
 
   private length1 = new BehaviorSubject<number>(0);
   public lengthOut = this.length1.asObservable();
