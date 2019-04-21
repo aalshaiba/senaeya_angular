@@ -1,13 +1,12 @@
 <div class="container">
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Start searching ..." [(ngModel)]="query">
+        <input type="text" class="form-control" placeholder="Start searching ..." [(ngModel)]="query" />
         <div class="input-group-append">
             <span class="input-group-text bg-dark"><i class="fas fa-search text-light"></i></span>
         </div>
     </div>
     <small class="text-muted">{{list_count}} {{list_count <= 1 ? 'Result' : 'Results'}}</small>
-    <div *ngIf="list == null" class="d-flex justify-content-around mt-4">
-        <h4>Loading ... </h4>
+    <div *ngIf="list == null" class="d-flex justify-content-center mt-4">
         <div class="spinner-border" role="status"></div>
     </div>
     <ul *ngFor="let shop of list | search:query" class="list-group list-group-flush">
